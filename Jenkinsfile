@@ -10,7 +10,7 @@ pipeline {
     stage('Build Docker') {
       steps {
         script {
-          dockerImage = docker.build(DOCKER_IMAGE)
+          dockerImage = sudo docker.build(DOCKER_IMAGE)
         }
       }
     }
