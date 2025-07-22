@@ -10,7 +10,7 @@ pipeline {
     stage('Build Docker') {
       steps {
         script {
-          dockerImage = sudo docker.build(DOCKER_IMAGE)
+          dockerImage = sh 'sudo docker build -t my-web-app:5 .'docker.build(DOCKER_IMAGE)
         }
       }
     }
